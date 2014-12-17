@@ -1,0 +1,37 @@
+//==================================================
+//　　　　　　   DrawPS2 - drawps2.rc
+//        Copyright(C)2003-2009 計算物理研究会
+//==================================================
+#include "resource.h"
+
+
+PSMENU MENU {
+	POPUP "ファイル(&F)" {
+		//MENUITEM "名前を付けて保存", IDM_END
+		//MENUITEM SEPARATOR
+		MENUITEM "終了(&X)", IDM_END
+	}
+	POPUP "ツール(&T)" {
+		MENUITEM "再生", IDM_START
+		MENUITEM "一時停止", IDM_SUSPEND
+		MENUITEM "停止", IDM_STOP
+		MENUITEM SEPARATOR		
+		MENUITEM "1フレーム再生", IDM_NEXTFRAME
+	}
+	POPUP "ヘルプ(&H)" {
+		MENUITEM "バージョン情報", IDM_VERSION
+	}
+}
+
+PSVERDLG DIALOG 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "バージョン情報"
+FONT 10, "MS UI Gothic"
+BEGIN
+	DEFPUSHBUTTON	"OK", IDOK, 127, 69, 50, 14
+	LTEXT			"DrawPS2", IDC_STATIC, 14, 11, 94, 8
+	LTEXT			"Version 2.0.1", IDC_STATIC, 14, 26, 94, 8
+	LTEXT			"Copyright(C) 2003-2009 P.S.P.T.計算物理研究会", IDC_STATIC, 14, 36, 184, 8
+	LTEXT			"http://pspt.hp.infoseek.jp/", IDC_STATIC, 14, 51, 94, 8
+END
+
