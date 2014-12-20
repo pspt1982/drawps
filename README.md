@@ -7,7 +7,7 @@
 の2つをプロジェクトの目的として活動しています.
 
 ## デモ
-(ここにgifアニメを貼る)
+![](/demo.gif)
 
 ## 必要
 - [GLUT for Win32](http://user.xmission.com/~nate/glut.html)
