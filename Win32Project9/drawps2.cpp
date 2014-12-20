@@ -301,7 +301,7 @@ LRESULT CALLBACK DRAWPS2::InitWndProc(HWND hwnd, UINT msg, WPARAM wp, LPARAM lp)
 		case WM_MOUSEMOVE:
 		case WM_NCMOUSEMOVE:
 			if(tMouseFunc!=NULL) (*tMouseFunc)(msg, LOWORD(lp), HIWORD(lp));
-			if(tKeyboardFunc==NULL && this_->window.style==beach) this_->defaultMouse(msg, LOWORD(lp), HIWORD(lp),GET_WHEEL_DELTA_WPARAM(wp));
+			if(tKeyboardFunc==NULL && this_->window.style==beach) this_->defaultMouse(msg, LOWORD(lp), HIWORD(lp));
 			return 0;
 		// キーボードイベント
 		case WM_KEYUP:
@@ -658,12 +658,10 @@ void DRAWPS2::beachIPM(double x1, double y1, double z1, double x2, double y2, do
 
 
 // beach標準マウス動作
-void DRAWPS2::defaultMouse(UINT state, int x, int y,int w)
+void DRAWPS2::defaultMouse(UINT state, int x, int y)
 {
 	const double PI = 3.141592653589793;
 	static enum MOUSE {NO_MODE=0, R_MODE, L_MODE, RL_MODE, LR_MODE} MOUSE_MODE=NO_MODE; // マウス状態
-	int mouse;
-	char debug[10]={0};
 
 	// マウスイベント
 	switch(state){
@@ -744,11 +742,7 @@ void DRAWPS2::defaultMouse(UINT state, int x, int y,int w)
 		}
 		break;
 	case WM_MOUSEWHEEL:
-		mouse=w;
-		OutputDebugString("エラー発生！\n");
-		if(mouse>0) vpoint.r+= (GLdouble)-0.5 ;
-		if(mouse<0) vpoint.r+= (GLdouble)0.5 ;
-		//vpoint.r = (GLdouble)((mouse<0) ? vpoint.r-0.5 : vpoint.r+0.5);
+		vpoint.r = (GLdouble)((short)y>0) ? vpoint.r-0.5 : vpoint.r+0.5;
 		if(vpoint.r <= 2.0) vpoint.r = 2.0;
 		Update();
 		break;
