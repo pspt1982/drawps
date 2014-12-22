@@ -13,6 +13,12 @@
 #define IDM_VIEWLOCK 40006
 #define IDM_TRACEWND 40007
 #define IDM_NEXTFRAME 40008
-#define IDC_STATIC 40009
+#define DS_SETFONT 600
+#define DS_MODALFRAME  600
+#define DS_FIXEDSYS 600
+#define	WS_POPUP 600
+#define	WS_CAPTION 600
+#define	WS_SYSMENU 600
+#define  IDOK 600
+#define IDC_STATIC 600
 #endif
-
