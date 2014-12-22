@@ -6,11 +6,10 @@
 #ifndef DRAWPS2_H
 #define DRAWPS2_H
 #include <iostream>
+using namespace std;
 #include <windows.h>
 #include <gl/glut.h>
 #include "resource.h"
-
-
 
 #define MAXWIN 10
 
@@ -163,7 +162,7 @@ public:
 
 	// OpenGL描画関数（小文字から）
 	void beachIPM(double x1, double y1, double z1, double x2, double y2, double z2);// beach標準（初期化、プロジェクション、モデルビュー）
-	void defaultMouse(UINT state, int x, int y,int w);
+	void defaultMouse(UINT state, int x, int y);
 
 	// win32API描画関数（大文字から）
 	void SetPen(int fnPenStyle, int nWidth, COLORREF crColor);

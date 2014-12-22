@@ -2,7 +2,6 @@
 //　　　　　　   DrawPS2 - drawps2.rc
 //        Copyright(C)2003-2009 計算物理研究会
 //==================================================
-#include <windows.h>
 #include "resource.h"
 
 
@@ -30,9 +29,9 @@ CAPTION "バージョン情報"
 FONT 10, "MS UI Gothic"
 BEGIN
 	DEFPUSHBUTTON	"OK", IDOK, 127, 69, 50, 14
-	LTEXT			"DrawPS2", 40010, 14, 11, 94, 8
-	LTEXT			"Version 2.0.1", 40011, 14, 26, 94, 8
-	LTEXT			"Copyright(C) 2003-2009 P.S.P.T.計算物理研究会", 40012, 14, 36, 184, 8
-	LTEXT			"http://pspt.hp.infoseek.jp/", 40013, 14, 51, 94, 8
+	LTEXT			"DrawPS2", IDC_STATIC, 14, 11, 94, 8
+	LTEXT			"Version 2.0.1", IDC_STATIC, 14, 26, 94, 8
+	LTEXT			"Copyright(C) 2003-2009 P.S.P.T.計算物理研究会", IDC_STATIC, 14, 36, 184, 8
+	LTEXT			"http://pspt.hp.infoseek.jp/", IDC_STATIC, 14, 51, 94, 8
 END
 
