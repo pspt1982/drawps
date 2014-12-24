@@ -46,12 +46,12 @@ double V(double r){
 // DrawPS2ÇÃê›íË
 void psMain()
 {
-	drps2.window.Size(1024, 43);
+	drps2.window.Size(1024, 100);
 	drps2.window.Position(0, 0);
 	drps2.psCreateWindow();
 
 	subwin.window.Size(400, 500);
-	subwin.window.Position(0, 43);
+	subwin.window.Position(0, 50);
 	subwin.event.Init(Init);
 	subwin.event.Calculate(Calculate);
 	subwin.event.Display(Display);
