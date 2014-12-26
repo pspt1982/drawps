@@ -17,6 +17,6 @@ DrawPSプロジェクトでは,
 ## インストール
 
 ## ライセンス
-
+[MIT](/LICENSE)
 ## 作成
 日本大学理工学部 サークル「[P.S.P.T. 計算物理研究会](http://www23.atwiki.jp/pspt/)」
