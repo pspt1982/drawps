@@ -46,12 +46,12 @@ double V(double r){
 // DrawPS2ÇÃê›íË
 void psMain()
 {
-	drps2.window.Size(1024, 100);
+	drps2.window.Size(1024, 80);
 	drps2.window.Position(0, 0);
 	drps2.psCreateWindow();
 
-	subwin.window.Size(400, 500);
-	subwin.window.Position(0, 50);
+	subwin.window.Size(720, 560);
+	subwin.window.Position(0, 80);
 	subwin.event.Init(Init);
 	subwin.event.Calculate(Calculate);
 	subwin.event.Display(Display);
@@ -59,7 +59,7 @@ void psMain()
 	subwin.psCreateWindow();
 	
 	graph.window.Size(300, 300);
-	graph.window.Position(724, 43);
+	graph.window.Position(724, 80);
 	graph.event.Display(gDisplay);
 	graph.psCreateWindow();
 }
